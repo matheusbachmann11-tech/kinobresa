@@ -1,12 +1,11 @@
--- ============================================================
+
 -- PROJETO: Kinobresa — Sistema de Gestão de Laticínios
 -- BANCO: Firebird 4.0
 -- AUTOR: Matheus Bachmann
 -- DESCRIÇÃO: Sistema ERP de laticínios em Firebird, cobrindo
---            fornecedores, produção, estoque, vendas e fiscal.
--- ============================================================
+     --      fornecedores, produção, estoque, vendas e fiscal.
 
--- ─── GERADORES (Sequences no Firebird) ───────────────────────
+-- ─── GERADORES (Sequences no Firebird)
 
 CREATE GENERATOR gen_fornecedor;
 SET GENERATOR gen_fornecedor TO 0;
