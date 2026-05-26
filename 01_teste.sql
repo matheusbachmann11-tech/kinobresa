@@ -1,11 +1,11 @@
 
--- PROJETO: Kinobresa — Sistema de Gestão de Laticínios
--- BANCO: Firebird 4.0
--- AUTOR: Matheus Bachmann
--- DESCRIÇÃO: Sistema ERP de laticínios em Firebird, cobrindo
+PROJETO: Kinobresa — Sistema de Gestão de Laticínios
+BANCO: Firebird 4.0
+AUTOR: Matheus Bachmann
+DESCRIÇÃO: Sistema ERP de laticínios em Firebird, cobrindo
      --      fornecedores, produção, estoque, vendas e fiscal.
 
--- ─── GERADORES (Sequences no Firebird)
+ GERADORES (Sequences no Firebird)
 
 CREATE GENERATOR gen_fornecedor;
 SET GENERATOR gen_fornecedor TO 0;
@@ -34,7 +34,7 @@ SET GENERATOR gen_pedido_item TO 0;
 CREATE GENERATOR gen_nota;
 SET GENERATOR gen_nota TO 0;
 
--- ─── TABELAS ──────────────────────────────────────────────────
+-- TABELAS
 
 CREATE TABLE TB_FORNECEDOR (
     ID_FORNECEDOR   INTEGER        NOT NULL PRIMARY KEY,
@@ -136,7 +136,7 @@ CREATE TABLE TB_NOTA_FISCAL (
                     CHECK (STATUS IN ('EMITIDA','CANCELADA'))
 );
 
--- ─── ÍNDICES ──────────────────────────────────────────────────
+-- ÍNDICES
 
 CREATE INDEX IDX_MP_FORNECEDOR  ON TB_MATERIA_PRIMA(ID_FORNECEDOR);
 CREATE INDEX IDX_PRODUTO_PROD   ON TB_PRODUTO(ID_PRODUCAO);
